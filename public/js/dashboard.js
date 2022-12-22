@@ -14,14 +14,16 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create post');
     }
   }
 };
 
-const delButtonHandler = async (event) => {
+
+
+/* const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -35,12 +37,12 @@ const delButtonHandler = async (event) => {
       alert('Failed to delete project');
     }
   }
-};
+}; */
 
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-document
+/*document
   .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+  .addEventListener('click', delButtonHandler); */
